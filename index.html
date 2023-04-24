@@ -83,7 +83,11 @@
       </header>
       <div class="grid-box">
         <section class="feature-post">
-          <img src="./assets/images/image-web-3-desktop.jpg" />
+          <img
+            id="feature-img"
+            src="./assets/images/image-web-3-desktop.jpg"
+            alt="feature post image"
+          />
           <h1>The Bright Future of Web 3.0?</h1>
           <div class="feature-post-info">
             <p>
@@ -174,6 +178,7 @@
     <script>
       const closeButton = document.getElementById("close-btn");
       const openButton = document.getElementById("open-btn");
+      const featureImg = document.getElementById("feature-img");
 
       closeButton.addEventListener("click", toggleOffCanvas);
       openButton.addEventListener("click", toggleOffCanvas);
@@ -187,6 +192,19 @@
           offCanvas.style.display = "none";
         }
       }
+
+      function changeImage(x) {
+        if (x.matches) {
+          // If media query matches
+          featureImg.src = "./assets/images/image-web-3-mobile.jpg";
+        } else {
+          featureImg.src = "./assets/images/image-web-3-desktop.jpg";
+        }
+      }
+
+      const x = window.matchMedia("(max-width: 768px)");
+      changeImage(x); // Call listener function at run time
+      x.addListener(changeImage); // Attach listener function on state changes
     </script>
   </body>
 </html>
