@@ -1,5 +1,20 @@
+@font-face {
+  src: url("./assets/fonts/static/Inter-Regular.ttf");
+  font-family: "Inter";
+}
+
+@font-face {
+  src: url("./assets/fonts/static/Inter-Bold.ttf");
+  font-family: "Inter";
+}
+
+@font-face {
+  src: url("./assets/fonts/static/Inter-ExtraBold.ttf");
+  font-family: "Inter";
+}
+
 :root {
-  font-family: sans-serif;
+  font-family: Inter;
 }
 
 * {
@@ -16,11 +31,27 @@ body {
 a {
   text-decoration: none;
   color: black;
+  font-weight: 300;
 }
 
 p {
   line-height: 24px;
   font-size: 15px;
+  font-weight: 300;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+.attribution a {
+  font-weight: 400;
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -79,7 +110,7 @@ nav {
 
 .feature-post h1 {
   font-size: 48px;
-  font-weight: bold;
+  font-weight: 900;
   padding: 2rem 2rem 2rem 0;
 }
 
